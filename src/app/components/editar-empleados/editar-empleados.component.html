@@ -1,0 +1,37 @@
+<div class="card mt-10" style="margin-top: 5%;">
+    <div class="card-header">
+     <h1>Editar Empleados</h1> 
+     <a routerLink="/employed" class="btn btn-primary" style="margin-left: auto;">Regresar</a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Modificar el Formulario para editar empleado</h5>
+      <form #formEdit="ngForm" (ngSubmit)="editEmploy()" >
+        <div class="form-group">
+            <input type="text" id="nombre" name="nombre"   class="form-control" [(ngModel)]="Empleado.nombreEmpleado"
+                placeholder="Nombres Completos" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="apellido" name="apellido"   class="form-control" [(ngModel)]="Empleado.apellidoEmpleado"
+                placeholder="Apellidos Completos" required>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email"    class="form-control" [(ngModel)]="Empleado.email"
+                placeholder="Correo, eje: Usuario@correo.com" disabled>
+        </div>
+        <div class="form-group">
+            <input type="text" id="docIdent" name="docIdent"  class="form-control" [(ngModel)]="Empleado.docIdent"
+                placeholder="Ingrese documento identidad" disabled>
+        </div>
+        <div class="form-group">
+            <input type="text" id="cargo" name="cargo"   class="form-control" [(ngModel)]="Empleado.cargo"
+                placeholder="Cargo, ej: Jefe de Sistemas" required>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" class="form-check-input" id="estado"  [(ngModel)]="Empleado.estado"  name="estado" required>
+            <label class="form-check-label" for="exampleCheck1">Estado (Activo/Inactivo)</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Editar</button>
+    </form>
+
+    </div>
+  </div>

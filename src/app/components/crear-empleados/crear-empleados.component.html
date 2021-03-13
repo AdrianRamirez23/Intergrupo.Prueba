@@ -1,0 +1,37 @@
+<div class="card mt-10" style="margin-top: 5%;">
+    <div class="card-header">
+     <h1>Crear Nuevo Empleados</h1> 
+     <a routerLink="/employed" class="btn btn-primary" style="margin-left: auto;">Regresar</a>
+    </div>
+    <div class="card-body">
+      <h5 class="card-title">Llenar el Formulario para crear un nuevo empleado</h5>
+      <form #formCreate="ngForm" (ngSubmit)="CreateEmployed()">
+        <div class="form-group">
+            <input type="text" id="nombre" name="nombre" [(ngModel)]="empleado.nombreEmpleado" class="form-control"
+                placeholder="Nombres Completos" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="apellido" name="apellido" [(ngModel)]="empleado.apellidoEmpleado" class="form-control"
+                placeholder="Apellidos Completos" required>
+        </div>
+        <div class="form-group">
+            <input type="email" id="email" name="email" [(ngModel)]="empleado.email" class="form-control"
+                placeholder="Correo, eje: Usuario@correo.com" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="docIdent" name="docIdent" [(ngModel)]="empleado.docIdent" class="form-control"
+                placeholder="Ingrese documento identidad" required>
+        </div>
+        <div class="form-group">
+            <input type="text" id="cargo" name="cargo" [(ngModel)]="empleado.cargo" class="form-control"
+                placeholder="Cargo, ej: Jefe de Sistemas" required>
+        </div>
+        <div class="form-group">
+            <input type="checkbox" class="form-check-input" id="estado" [(ngModel)]="empleado.estado" name="estado" required>
+            <label class="form-check-label" for="exampleCheck1">Estado (Activo/Inactivo)</label>
+        </div>
+        <button type="submit" class="btn btn-primary btn-lg btn-block">Crear Nuevo</button>
+    </form>
+
+    </div>
+  </div>
